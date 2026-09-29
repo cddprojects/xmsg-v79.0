@@ -1,0 +1,222 @@
+/* Pogo Hire static-export fixes — 2026-09-29 */
+
+/* Stable table-of-contents behavior for static HTML exports */
+.elementor-widget-table-of-contents .elementor-toc__body {
+  overflow: visible;
+}
+.pogo-static-toc {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pogo-static-toc li {
+  margin: 0 0 8px;
+  padding: 0;
+}
+.pogo-static-toc li:last-child {
+  margin-bottom: 0;
+}
+.pogo-static-toc a {
+  display: block;
+  color: var(--item-text-color, var(--e-global-color-text, #3d3d3d));
+  text-decoration: none;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  transition: color .2s ease, font-weight .2s ease;
+}
+.pogo-static-toc a:hover,
+.pogo-static-toc a:focus-visible,
+.pogo-static-toc a.is-active {
+  color: var(--item-text-active-color, var(--e-global-color-secondary, #000));
+  font-weight: 600;
+}
+.pogo-static-toc a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+.pogo-toc-target {
+  scroll-margin-top: 110px;
+}
+
+
+
+/* Static opportunity progress bars: preserve the score visually even when Elementor JS is absent. */
+body.elementor-page-11 #browse-opportunities .elementor-progress-bar {
+  background-color: var(--e-global-color-primary, #00b9b5);
+  border-radius: 50px;
+  min-width: 0;
+}
+
+
+
+/* Connect With Us layout for static hosting.
+   The exported image is kept in normal document flow inside the left CTA column,
+   preventing it from escaping upward into “What We Provide” at responsive widths. */
+body.elementor-page-11 .elementor-element-2a957d4 {
+  --padding-bottom: 0px;
+}
+body.elementor-page-11 .elementor-element-2a957d4 .elementor-element-eb50585 {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 8px 0 0 !important;
+  transform: none !important;
+  align-self: stretch;
+}
+body.elementor-page-11 .elementor-element-2a957d4 .elementor-element-eb50585 img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1100px) and (min-width: 768px) {
+  body.elementor-page-11 .elementor-element-2a957d4,
+  body.elementor-page-11 .elementor-element-0a3512c {
+    --width: 50%;
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Homepage responsive hardening */
+@media (max-width: 767px) {
+  body.elementor-page-11 .elementor-element-0d163a6 .e-con-inner,
+  body.elementor-page-11 .elementor-element-3bc55a2 .e-con-inner,
+  body.elementor-page-11 .elementor-element-e060870 .e-con-inner,
+  body.elementor-page-11 .elementor-element-7c1e57a .e-con-inner {
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Hero text should shrink with the viewport instead of retaining desktop pixel widths. */
+  body.elementor-page-11 .elementor-element-f41d9af,
+  body.elementor-page-11 .elementor-element-3b6d11b {
+    --container-widget-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Section heading row had 555px / 545px fixed child widths in the export. */
+  body.elementor-page-11 .elementor-element-64e05ee {
+    --flex-direction: column;
+    --align-items: stretch;
+  }
+  body.elementor-page-11 .elementor-element-9e397b1,
+  body.elementor-page-11 .elementor-element-fff5974 {
+    --width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  body.elementor-page-11 .elementor-element-fff5974 {
+    --justify-content: flex-start;
+  }
+
+  /* Prevent the “What We Provide” headline from forcing a 390px layout on 360/375px phones. */
+  body.elementor-page-11 .elementor-element-8750f89 {
+    --container-widget-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* CTA/form becomes a clean vertical flow on phones. */
+  body.elementor-page-11 .elementor-element-7c1e57a {
+    --flex-direction: column;
+    --align-items: stretch;
+  }
+  body.elementor-page-11 .elementor-element-2a957d4,
+  body.elementor-page-11 .elementor-element-0a3512c {
+    --width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  body.elementor-page-11 .elementor-element-e7d4bd5,
+  body.elementor-page-11 .elementor-element-e7d4bd5 > div[data-cddform] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* The exported image was absolutely positioned 352px below the section, causing overlap/blank space. */
+  body.elementor-page-11 .elementor-element-eb50585 {
+    position: relative !important;
+    inset: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+  body.elementor-page-11 .elementor-element-eb50585 img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 479px) {
+  body.elementor-page-11 .elementor-element-0d163a6,
+  body.elementor-page-11 .elementor-element-3bc55a2,
+  body.elementor-page-11 .elementor-element-e060870 {
+    --padding-left: 20px;
+    --padding-right: 20px;
+  }
+  body.elementor-page-11 .elementor-element-0d163a6 {
+    --padding-top: 64px;
+    --padding-bottom: 64px;
+  }
+  body.elementor-page-11 .elementor-element-3bc55a2,
+  body.elementor-page-11 .elementor-element-e060870 {
+    --padding-top: 64px;
+    --padding-bottom: 64px;
+  }
+  body.elementor-page-11 .elementor-element-2a957d4 {
+    --padding-left: 20px;
+    --padding-right: 20px;
+  }
+  body.elementor-page-11 .elementor-element-0a3512c {
+    --padding-left: 20px;
+    --padding-right: 20px;
+  }
+}
+
+
+
+
+/* Legal pages TOC layout. The actual desktop pinning is handled by site-fixes.js
+   because Elementor's nested flex wrappers can make native position:sticky unreliable. */
+@media (min-width: 768px) {
+  .pogo-legal-content-row {
+    overflow: visible !important;
+    align-items: stretch !important;
+  }
+
+  .pogo-sticky-toc-column {
+    position: relative !important;
+    align-self: stretch !important;
+    height: auto !important;
+    min-height: 0;
+    overflow: visible !important;
+  }
+
+  .pogo-sticky-toc-column > .pogo-static-toc-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pogo-sticky-toc-column,
+  .pogo-static-toc-box {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+}

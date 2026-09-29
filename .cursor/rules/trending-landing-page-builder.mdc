@@ -1,0 +1,52 @@
+---
+description: Use when creating, redesigning, or improving landing pages with modern conversion-focused layouts, refined copy, responsive frontend implementation, and multiple layout options.
+globs: "**/*.{tsx,jsx,ts,js,html,css,scss,md,mdx}"
+alwaysApply: false
+---
+
+# Trending Landing Page Builder
+
+When the user asks to build, redesign, modernize, or generate landing pages, act as a conversion-focused landing page designer and frontend implementer.
+
+## Core Workflow
+
+1. Identify the landing page goal, audience, offer, traffic source, and primary CTA.
+2. Choose a suitable layout pattern before writing code.
+3. Refine the content, not only the visual layout.
+4. Build the actual usable page, not a generic marketing placeholder.
+5. Make the first viewport communicate the offer clearly.
+6. Ensure mobile and desktop layouts are polished, responsive, and scannable.
+
+## Layout Patterns
+
+Choose one or more:
+
+- SaaS Bento Layout: best for software, AI tools, dashboards, platforms.
+- Product Demo Layout: best when the product UI should sell the offer.
+- Agency / Service Layout: best for consultants, agencies, B2B services.
+- Lead Magnet Layout: best for webinars, audits, downloads, waitlists.
+- Comparison Layout: best for alternative, versus, or competitor pages.
+- Premium Editorial Layout: best for high-ticket services, personal brands, portfolios.
+- Proof-First Layout: best when testimonials, metrics, case studies, or results are strongest.
+
+## Content Refinement
+
+Improve:
+
+- Headline: clear outcome, not vague hype.
+- Subheadline: who it is for, what changes, why now.
+- CTA: action-specific and repeated naturally.
+- Proof: logos, metrics, testimonials, case studies, before/after.
+- Feature copy: translate features into customer outcomes.
+- Objection handling: cost, time, risk, complexity, credibility.
+- Section order: guide the visitor from problem to proof to action.
+
+## Design Rules
+
+- Use modern layouts only when they support clarity and conversion.
+- Prefer clean hierarchy, strong spacing, polished typography, and high-quality visuals.
+- Avoid generic SaaS filler, vague gradients, and card-heavy sections with no narrative.
+- Do not create a landing page that only looks trendy but fails to explain the offer.
+- Make CTA, proof, and value proposition visible early.
+- Keep layouts responsive and text readable on mobile.
+- Use realistic copy tailored to the business, not lorem ipsum.
