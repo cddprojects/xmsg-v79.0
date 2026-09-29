@@ -58,7 +58,7 @@
    This pins the box while its article row is on screen, then releases it at the row end. */
 (() => {
   const DESKTOP_MIN = 768;
-  const TOP_GAP = 80;
+  const TOP_GAP = 10;
 
   const initPinnedToc = () => {
     const items = [...document.querySelectorAll('.pogo-sticky-toc-column')]
